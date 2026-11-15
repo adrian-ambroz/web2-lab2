@@ -1,4 +1,4 @@
-require('dotenv').config();   // učita .env u process.env
+require('dotenv').config();   
 const { Pool } = require('pg');
 
 const pool = new Pool({
@@ -7,7 +7,7 @@ const pool = new Pool({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
   port: 5432,
-  ssl: true,                  // Render baza traži SSL
+  ssl: true,                 
 });
 
 module.exports = pool;
